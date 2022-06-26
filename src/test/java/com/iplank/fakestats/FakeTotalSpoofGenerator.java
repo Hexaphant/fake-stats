@@ -41,29 +41,14 @@ public class FakeTotalSpoofGenerator {
 
         i++;
         String totalChunk =
-                /*
-                if (config.spoofAttack()) {
-                    if (config.attackLevel() <= 99) {
-                        total += config.attackLevel();
-                    } else if (config.attackLevel() > 99 && config.attackLevel() <= 126 && config.virtualTotal()) {
-                        total += config.attackLevel();
-                    } else if (config.attackLevel() > 126 && config.virtualTotal()) {
-                        total += 126;
-                    } else if (config.attackLevel() > 99) {
-                        total += 99;
-                    }
-                } else {
-                    total += client.getRealSkillLevel(Skill.ATTACK);
-                }
-                */
-                "\t\t\tif (config.spoof" + skillName + "()) {" + "\n" +
-                "\t\t\t\tif (config." + skillLowercase + "Level() <= 99) {" + "\n" +
-                "\t\t\t\t\ttotal += config." + skillLowercase +  "Level();" + "\n" +
-                "\t\t\t\t} else if (config."+ skillLowercase + "Level() > 99 && config." + skillLowercase + "Level() <= 126 && config.virtualTotal()) {" + "\n" +
-                "\t\t\t\t\ttotal += config." + skillLowercase +  "Level();" + "\n" +
-                "\t\t\t\t} else if (config."+ skillLowercase + "Level() > 126 && config.virtualTotal()) {" + "\n" +
+                "\t\t\tif (cachedConfig.spoof" + skillName + ") {" + "\n" +
+                "\t\t\t\tif (cachedConfig." + skillLowercase + "Level <= 99) {" + "\n" +
+                "\t\t\t\t\ttotal += cachedConfig." + skillLowercase +  "Level;" + "\n" +
+                "\t\t\t\t} else if (cachedConfig."+ skillLowercase + "Level > 99 && cachedConfig." + skillLowercase + "Level <= 126 && cachedConfig.virtualTotal) {" + "\n" +
+                "\t\t\t\t\ttotal += cachedConfig." + skillLowercase +  "Level;" + "\n" +
+                "\t\t\t\t} else if (cachedConfig."+ skillLowercase + "Level > 126 && cachedConfig.virtualTotal) {" + "\n" +
                 "\t\t\t\t\ttotal += 126;" + "\n" +
-                "\t\t\t\t} else if (config." + skillLowercase + "Level() > 99) {" + "\n" +
+                "\t\t\t\t} else if (cachedConfig." + skillLowercase + "Level > 99) {" + "\n" +
                 "\t\t\t\t\ttotal += 99;" + "\n" +
                 "\t\t\t\t}" + "\n" +
                 "\t\t\t} else {" + "\n" +
