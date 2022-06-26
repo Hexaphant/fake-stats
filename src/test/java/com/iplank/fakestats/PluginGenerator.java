@@ -41,20 +41,20 @@ public class PluginGenerator {
         i++;
         String pluginChunk =
                 "\t\t// " + skillName + " Logic" + "\n" +
-                "\t\tif (config.spoof" + skillName +  "()) {" + "\n" +
+                "\t\tif (cachedConfig.spoof" + skillName +  ") {" + "\n" +
                 "\t\t\tWidget skillWidget = client.getWidget(WidgetID.SKILLS_GROUP_ID, " + i + ");" + "\n" +
                 "\t\t\tif (skillWidget == null) { return; }" + "\n" +
                 "\t\t\tWidget[] skillWidgetComponents = skillWidget.getDynamicChildren();" + "\n" +
                 "\t\t\tif (skillWidgetComponents.length >= 4) {" + "\n" +
-                "\t\t\t\tif (config." + skillLowercase + "Level() > 99) {" + "\n" +
+                "\t\t\t\tif (cachedConfig." + skillLowercase + "Level > 99) {" + "\n" +
                 "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + 99);" + "\n" +
                 "\t\t\t\t} else {" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + config." + skillLowercase + "Level());" + "\n" +
+                "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
                 "\t\t\t\t}" + "\n" +
-                "\t\t\t\tif (config." + skillLowercase + "Level() > 126) {" + "\n" +
+                "\t\t\t\tif (cachedConfig." + skillLowercase + "Level > 126) {" + "\n" +
                 "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + 126);" + "\n" +
                 "\t\t\t\t} else {" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + config." + skillLowercase + "Level());" + "\n" +
+                "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
                 "\t\t\t\t}" + "\n" +
                 "\t\t\t}" + "\n" +
                 "\t\t}" + "\n\n";
