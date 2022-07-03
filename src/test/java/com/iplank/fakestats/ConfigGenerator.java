@@ -19,8 +19,8 @@ public class ConfigGenerator {
         s += generateConfig(Skill.AGILITY);
         s += generateConfig(Skill.HERBLORE);
         s += generateConfig(Skill.THIEVING);
-        s += generateConfig(Skill.FLETCHING);
         s += generateConfig(Skill.CRAFTING);
+        s += generateConfig(Skill.FLETCHING);
         s += generateConfig(Skill.SLAYER);
         s += generateConfig(Skill.HUNTER);
         s += generateConfig(Skill.MINING);
@@ -59,7 +59,11 @@ public class ConfigGenerator {
                         "\tdefault boolean spoof" + skillName + "() { return false; }" + "\n\n";
         i++;
         String configChunkItem2 =
-                "\t@ConfigItem(" + "\n" +
+                "\t@Range(" + "\n" +
+                        "\t\tmin = 1," + "\n" +
+                        "\t\tmax = 126" + "\n" +
+                        "\t)" + "\n" +
+                        "\t@ConfigItem(" + "\n" +
                         "\t\tkeyName = \"" + skillLowercase + "Level\"," + "\n" +
                         "\t\tname = \"Level to Spoof\"," + "\n" +
                         "\t\tdescription = \"What Level to Spoof " + skillName + " to\"," + "\n" +

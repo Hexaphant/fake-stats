@@ -87,13 +87,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.attackLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.attackLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.attackLevel);
-				}
-				if (cachedConfig.attackLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.attackLevel);
 				}
 			}
@@ -106,13 +108,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.strengthLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.strengthLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.strengthLevel);
-				}
-				if (cachedConfig.strengthLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.strengthLevel);
 				}
 			}
@@ -125,13 +129,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.defenceLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.defenceLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.defenceLevel);
-				}
-				if (cachedConfig.defenceLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.defenceLevel);
 				}
 			}
@@ -144,13 +150,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.rangedLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.rangedLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.rangedLevel);
-				}
-				if (cachedConfig.rangedLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.rangedLevel);
 				}
 			}
@@ -163,13 +171,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.prayerLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.prayerLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.prayerLevel);
-				}
-				if (cachedConfig.prayerLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.prayerLevel);
 				}
 			}
@@ -182,13 +192,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.magicLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.magicLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.magicLevel);
-				}
-				if (cachedConfig.magicLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.magicLevel);
 				}
 			}
@@ -201,13 +213,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.runecraftLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.runecraftLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.runecraftLevel);
-				}
-				if (cachedConfig.runecraftLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.runecraftLevel);
 				}
 			}
@@ -220,13 +234,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.constructionLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.constructionLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.constructionLevel);
-				}
-				if (cachedConfig.constructionLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.constructionLevel);
 				}
 			}
@@ -239,13 +255,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.hitpointsLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.hitpointsLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.hitpointsLevel);
-				}
-				if (cachedConfig.hitpointsLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.hitpointsLevel);
 				}
 			}
@@ -258,13 +276,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.agilityLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.agilityLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.agilityLevel);
-				}
-				if (cachedConfig.agilityLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.agilityLevel);
 				}
 			}
@@ -277,13 +297,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.herbloreLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.herbloreLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.herbloreLevel);
-				}
-				if (cachedConfig.herbloreLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.herbloreLevel);
 				}
 			}
@@ -296,52 +318,58 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.thievingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.thievingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.thievingLevel);
-				}
-				if (cachedConfig.thievingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.thievingLevel);
-				}
-			}
-		}
-
-		// Fletching Logic
-		if (cachedConfig.spoofFletching) {
-			Widget skillWidget = client.getWidget(WidgetID.SKILLS_GROUP_ID, 13);
-			if (skillWidget == null) { return; }
-			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
-			if (skillWidgetComponents.length >= 4) {
-				if (cachedConfig.fletchingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
-				} else {
-					skillWidgetComponents[3].setText("" + cachedConfig.fletchingLevel);
-				}
-				if (cachedConfig.fletchingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
-					skillWidgetComponents[4].setText("" + cachedConfig.fletchingLevel);
 				}
 			}
 		}
 
 		// Crafting Logic
 		if (cachedConfig.spoofCrafting) {
-			Widget skillWidget = client.getWidget(WidgetID.SKILLS_GROUP_ID, 14);
+			Widget skillWidget = client.getWidget(WidgetID.SKILLS_GROUP_ID, 13);
 			if (skillWidget == null) { return; }
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.craftingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.craftingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.craftingLevel);
-				}
-				if (cachedConfig.craftingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.craftingLevel);
+				}
+			}
+		}
+
+		// Fletching Logic
+		if (cachedConfig.spoofFletching) {
+			Widget skillWidget = client.getWidget(WidgetID.SKILLS_GROUP_ID, 14);
+			if (skillWidget == null) { return; }
+			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
+			if (skillWidgetComponents.length >= 4) {
+				if (cachedConfig.fletchingLevel > 99) {
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.fletchingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
+				} else {
+					skillWidgetComponents[3].setText("" + cachedConfig.fletchingLevel);
+					skillWidgetComponents[4].setText("" + cachedConfig.fletchingLevel);
 				}
 			}
 		}
@@ -353,13 +381,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.slayerLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.slayerLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.slayerLevel);
-				}
-				if (cachedConfig.slayerLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.slayerLevel);
 				}
 			}
@@ -372,13 +402,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.hunterLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.hunterLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.hunterLevel);
-				}
-				if (cachedConfig.hunterLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.hunterLevel);
 				}
 			}
@@ -391,13 +423,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.miningLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.miningLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.miningLevel);
-				}
-				if (cachedConfig.miningLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.miningLevel);
 				}
 			}
@@ -410,13 +444,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.smithingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.smithingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.smithingLevel);
-				}
-				if (cachedConfig.smithingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.smithingLevel);
 				}
 			}
@@ -429,13 +465,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.fishingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.fishingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.fishingLevel);
-				}
-				if (cachedConfig.fishingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.fishingLevel);
 				}
 			}
@@ -448,13 +486,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.cookingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.cookingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.cookingLevel);
-				}
-				if (cachedConfig.cookingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.cookingLevel);
 				}
 			}
@@ -467,13 +507,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.firemakingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.firemakingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.firemakingLevel);
-				}
-				if (cachedConfig.firemakingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.firemakingLevel);
 				}
 			}
@@ -486,13 +528,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.woodcuttingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.woodcuttingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.woodcuttingLevel);
-				}
-				if (cachedConfig.woodcuttingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.woodcuttingLevel);
 				}
 			}
@@ -505,13 +549,15 @@ public class FakeStatsPlugin extends Plugin
 			Widget[] skillWidgetComponents = skillWidget.getDynamicChildren();
 			if (skillWidgetComponents.length >= 4) {
 				if (cachedConfig.farmingLevel > 99) {
-					skillWidgetComponents[3].setText("" + 99);
+					if (cachedConfig.virtualLevels) {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + cachedConfig.farmingLevel);
+					} else {
+						skillWidgetComponents[3].setText("" + 99);
+						skillWidgetComponents[4].setText("" + 99);
+					}
 				} else {
 					skillWidgetComponents[3].setText("" + cachedConfig.farmingLevel);
-				}
-				if (cachedConfig.farmingLevel > 126) {
-					skillWidgetComponents[4].setText("" + 126);
-				} else {
 					skillWidgetComponents[4].setText("" + cachedConfig.farmingLevel);
 				}
 			}
@@ -590,7 +636,7 @@ public class FakeStatsPlugin extends Plugin
 		} else if (cachedConfig.spoofTotal) {
 			// Spoof Total from Config
 			widgetText.setText(TOTAL_LEVEL_TEXT_PREFIX + cachedConfig.totalLevel);
-		} else if (cachedConfig.fakeSpoofTotal) {
+		} else if (cachedConfig.fakeSpoofTotal && cachedConfig.virtualLevels) {
 			// Spoof Fake Total Level
 			int total = 0;
 			// begin autogenerated
@@ -750,19 +796,6 @@ public class FakeStatsPlugin extends Plugin
 			} else {
 				total += client.getRealSkillLevel(Skill.THIEVING);
 			}
-			if (cachedConfig.spoofFletching) {
-				if (cachedConfig.fletchingLevel <= 99) {
-					total += cachedConfig.fletchingLevel;
-				} else if (cachedConfig.fletchingLevel > 99 && cachedConfig.fletchingLevel <= 126 && cachedConfig.virtualTotal) {
-					total += cachedConfig.fletchingLevel;
-				} else if (cachedConfig.fletchingLevel > 126 && cachedConfig.virtualTotal) {
-					total += 126;
-				} else if (cachedConfig.fletchingLevel > 99) {
-					total += 99;
-				}
-			} else {
-				total += client.getRealSkillLevel(Skill.FLETCHING);
-			}
 			if (cachedConfig.spoofCrafting) {
 				if (cachedConfig.craftingLevel <= 99) {
 					total += cachedConfig.craftingLevel;
@@ -775,6 +808,19 @@ public class FakeStatsPlugin extends Plugin
 				}
 			} else {
 				total += client.getRealSkillLevel(Skill.CRAFTING);
+			}
+			if (cachedConfig.spoofFletching) {
+				if (cachedConfig.fletchingLevel <= 99) {
+					total += cachedConfig.fletchingLevel;
+				} else if (cachedConfig.fletchingLevel > 99 && cachedConfig.fletchingLevel <= 126 && cachedConfig.virtualTotal) {
+					total += cachedConfig.fletchingLevel;
+				} else if (cachedConfig.fletchingLevel > 126 && cachedConfig.virtualTotal) {
+					total += 126;
+				} else if (cachedConfig.fletchingLevel > 99) {
+					total += 99;
+				}
+			} else {
+				total += client.getRealSkillLevel(Skill.FLETCHING);
 			}
 			if (cachedConfig.spoofSlayer) {
 				if (cachedConfig.slayerLevel <= 99) {
@@ -924,6 +970,7 @@ class CachedConfig {
 
 	// Toggleable Variables
 	public boolean fakeSpoofTotal;
+	public boolean virtualLevels;
 	public boolean virtualTotal;
 
 	// Preset Variable
@@ -992,6 +1039,7 @@ class CachedConfig {
 	public void cacheValues() {
 		// Toggleable Variables
 		fakeSpoofTotal = config.fakeSpoofTotal();
+		virtualLevels = config.virtualLevels();
 		virtualTotal = config.virtualTotal();
 
 		// Preset Variable

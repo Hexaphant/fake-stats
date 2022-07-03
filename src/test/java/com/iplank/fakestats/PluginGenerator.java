@@ -19,8 +19,8 @@ public class PluginGenerator {
         s += generatePlugin(Skill.AGILITY, 10);
         s += generatePlugin(Skill.HERBLORE, 11);
         s += generatePlugin(Skill.THIEVING, 12);
-        s += generatePlugin(Skill.FLETCHING, 13);
-        s += generatePlugin(Skill.CRAFTING, 14);
+        s += generatePlugin(Skill.CRAFTING, 13);
+        s += generatePlugin(Skill.FLETCHING, 14);
         s += generatePlugin(Skill.SLAYER, 15);
         s += generatePlugin(Skill.HUNTER, 16);
         s += generatePlugin(Skill.MINING, 17);
@@ -47,13 +47,15 @@ public class PluginGenerator {
                 "\t\t\tWidget[] skillWidgetComponents = skillWidget.getDynamicChildren();" + "\n" +
                 "\t\t\tif (skillWidgetComponents.length >= 4) {" + "\n" +
                 "\t\t\t\tif (cachedConfig." + skillLowercase + "Level > 99) {" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + 99);" + "\n" +
+                "\t\t\t\t\tif (cachedConfig.virtualLevels) {" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + 99);" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
+                "\t\t\t\t\t} else {" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + 99);" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + 99);" + "\n" +
+                "\t\t\t\t\t}" + "\n" +
                 "\t\t\t\t} else {" + "\n" +
                 "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
-                "\t\t\t\t}" + "\n" +
-                "\t\t\t\tif (cachedConfig." + skillLowercase + "Level > 126) {" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + 126);" + "\n" +
-                "\t\t\t\t} else {" + "\n" +
                 "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
                 "\t\t\t\t}" + "\n" +
                 "\t\t\t}" + "\n" +

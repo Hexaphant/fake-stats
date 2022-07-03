@@ -4,6 +4,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigSection;
 import net.runelite.client.config.ConfigItem;
+import net.runelite.client.config.Range;
 
 @ConfigGroup("fakestats")
 public interface FakeStatsConfig extends Config
@@ -12,9 +13,17 @@ public interface FakeStatsConfig extends Config
 			keyName = "fakeSpoofTotal",
 			name = "Spoof Fake Total Level",
 			description = "Set Total to Include Spoofed Levels",
-			position = -4
+			position = -5
 	)
 	default boolean fakeSpoofTotal() { return true; }
+
+	@ConfigItem(
+			keyName = "virtualLevels",
+			name = "Enable Virtual Levels",
+			description = "Enable Levels 100-126",
+			position = -4
+	)
+	default boolean virtualLevels() { return false; }
 
 	@ConfigItem(
 			keyName = "virtualTotal",
@@ -105,6 +114,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofAttack() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "attackLevel",
 			name = "Level to Spoof",
@@ -131,6 +144,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofStrength() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "strengthLevel",
 			name = "Level to Spoof",
@@ -157,6 +174,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofDefence() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "defenceLevel",
 			name = "Level to Spoof",
@@ -183,6 +204,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofRanged() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "rangedLevel",
 			name = "Level to Spoof",
@@ -209,6 +234,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofPrayer() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "prayerLevel",
 			name = "Level to Spoof",
@@ -235,6 +264,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofMagic() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "magicLevel",
 			name = "Level to Spoof",
@@ -261,6 +294,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofRunecraft() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "runecraftLevel",
 			name = "Level to Spoof",
@@ -287,6 +324,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofConstruction() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "constructionLevel",
 			name = "Level to Spoof",
@@ -313,6 +354,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofHitpoints() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "hitpointsLevel",
 			name = "Level to Spoof",
@@ -339,6 +384,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofAgility() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "agilityLevel",
 			name = "Level to Spoof",
@@ -365,6 +414,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofHerblore() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "herbloreLevel",
 			name = "Level to Spoof",
@@ -391,6 +444,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofThieving() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "thievingLevel",
 			name = "Level to Spoof",
@@ -401,36 +458,10 @@ public interface FakeStatsConfig extends Config
 	default int thievingLevel() { return 99; }
 
 	@ConfigSection(
-			name = "Fletching",
-			description = "Configure the Fletching skill",
-			closedByDefault = true,
-			position = 36
-	)
-	String fletching = "fletching";
-
-	@ConfigItem(
-			keyName = "spoofFletching",
-			name = "Spoof Fletching",
-			description = "Whether or not to Spoof Fletching",
-			section = fletching,
-			position = 37
-	)
-	default boolean spoofFletching() { return false; }
-
-	@ConfigItem(
-			keyName = "fletchingLevel",
-			name = "Level to Spoof",
-			description = "What Level to Spoof Fletching to",
-			section = fletching,
-			position = 38
-	)
-	default int fletchingLevel() { return 99; }
-
-	@ConfigSection(
 			name = "Crafting",
 			description = "Configure the Crafting skill",
 			closedByDefault = true,
-			position = 39
+			position = 36
 	)
 	String crafting = "crafting";
 
@@ -439,18 +470,52 @@ public interface FakeStatsConfig extends Config
 			name = "Spoof Crafting",
 			description = "Whether or not to Spoof Crafting",
 			section = crafting,
-			position = 40
+			position = 37
 	)
 	default boolean spoofCrafting() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "craftingLevel",
 			name = "Level to Spoof",
 			description = "What Level to Spoof Crafting to",
 			section = crafting,
-			position = 41
+			position = 38
 	)
 	default int craftingLevel() { return 99; }
+
+	@ConfigSection(
+			name = "Fletching",
+			description = "Configure the Fletching skill",
+			closedByDefault = true,
+			position = 39
+	)
+	String fletching = "fletching";
+
+	@ConfigItem(
+			keyName = "spoofFletching",
+			name = "Spoof Fletching",
+			description = "Whether or not to Spoof Fletching",
+			section = fletching,
+			position = 40
+	)
+	default boolean spoofFletching() { return false; }
+
+	@Range(
+			min = 1,
+			max = 126
+	)
+	@ConfigItem(
+			keyName = "fletchingLevel",
+			name = "Level to Spoof",
+			description = "What Level to Spoof Fletching to",
+			section = fletching,
+			position = 41
+	)
+	default int fletchingLevel() { return 99; }
 
 	@ConfigSection(
 			name = "Slayer",
@@ -469,6 +534,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofSlayer() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "slayerLevel",
 			name = "Level to Spoof",
@@ -495,6 +564,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofHunter() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "hunterLevel",
 			name = "Level to Spoof",
@@ -521,6 +594,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofMining() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "miningLevel",
 			name = "Level to Spoof",
@@ -547,6 +624,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofSmithing() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "smithingLevel",
 			name = "Level to Spoof",
@@ -573,6 +654,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofFishing() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "fishingLevel",
 			name = "Level to Spoof",
@@ -599,6 +684,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofCooking() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "cookingLevel",
 			name = "Level to Spoof",
@@ -625,6 +714,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofFiremaking() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "firemakingLevel",
 			name = "Level to Spoof",
@@ -651,6 +744,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofWoodcutting() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "woodcuttingLevel",
 			name = "Level to Spoof",
@@ -677,6 +774,10 @@ public interface FakeStatsConfig extends Config
 	)
 	default boolean spoofFarming() { return false; }
 
+	@Range(
+			min = 1,
+			max = 126
+	)
 	@ConfigItem(
 			keyName = "farmingLevel",
 			name = "Level to Spoof",

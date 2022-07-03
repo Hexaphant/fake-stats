@@ -19,8 +19,8 @@ public class FakeTotalSpoofGenerator {
         s += generateChunk(Skill.AGILITY);
         s += generateChunk(Skill.HERBLORE);
         s += generateChunk(Skill.THIEVING);
-        s += generateChunk(Skill.FLETCHING);
         s += generateChunk(Skill.CRAFTING);
+        s += generateChunk(Skill.FLETCHING);
         s += generateChunk(Skill.SLAYER);
         s += generateChunk(Skill.HUNTER);
         s += generateChunk(Skill.MINING);
