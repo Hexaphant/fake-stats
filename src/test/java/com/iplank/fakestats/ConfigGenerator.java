@@ -71,6 +71,26 @@ public class ConfigGenerator {
                         "\t\tposition = " + i + "\n" +
                         "\t)" + "\n" +
                         "\tdefault int " + skillLowercase + "Level() { return 99; }" + "\n\n";
-        return configChunkSection + configChunkItem1 + configChunkItem2;
+        i++;
+        String configChunkItem3 =
+                "\t@ConfigItem(" + "\n" +
+                        "\t\tkeyName = \"" + skillLowercase + "Left\"," + "\n" +
+                        "\t\tname = \"Spoof Left Value\"," + "\n" +
+                        "\t\tdescription = \"Spoof the left digit of the skill display?\"," + "\n" +
+                        "\t\tsection = " + skillLowercase + "," + "\n" +
+                        "\t\tposition = " + i + "\n" +
+                        "\t)" + "\n" +
+                        "\tdefault boolean " + skillLowercase + "Left() { return true; }" + "\n\n";
+        i++;
+        String configChunkItem4 =
+                "\t@ConfigItem(" + "\n" +
+                        "\t\tkeyName = \"" + skillLowercase + "Right\"," + "\n" +
+                        "\t\tname = \"Spoof Right Value\"," + "\n" +
+                        "\t\tdescription = \"Spoof the right digit of the skill display?\"," + "\n" +
+                        "\t\tsection = " + skillLowercase + "," + "\n" +
+                        "\t\tposition = " + i + "\n" +
+                        "\t)" + "\n" +
+                        "\tdefault boolean " + skillLowercase + "Right() { return true; }" + "\n\n";
+        return configChunkSection + configChunkItem1 + configChunkItem2 + configChunkItem3 + configChunkItem4;
     }
 }

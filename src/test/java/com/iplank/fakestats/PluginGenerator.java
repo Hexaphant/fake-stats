@@ -55,8 +55,12 @@ public class PluginGenerator {
                 "\t\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + 99);" + "\n" +
                 "\t\t\t\t\t}" + "\n" +
                 "\t\t\t\t} else {" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
-                "\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
+                "\t\t\t\t\tif (cachedConfig." + skillLowercase + "Left) {" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[3].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
+                "\t\t\t\t\t}" + "\n" +
+                "\t\t\t\t\tif (cachedConfig." + skillLowercase + "Right) {" + "\n" +
+                "\t\t\t\t\t\tskillWidgetComponents[4].setText(\"\" + cachedConfig." + skillLowercase + "Level);" + "\n" +
+                "\t\t\t\t\t}" + "\n" +
                 "\t\t\t\t}" + "\n" +
                 "\t\t\t}" + "\n" +
                 "\t\t}" + "\n\n";
